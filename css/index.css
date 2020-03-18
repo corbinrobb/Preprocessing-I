@@ -173,10 +173,22 @@ nav {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 500px) {
+  nav {
+    justify-content: space-around;
+    background-color: #edeef0;
+  }
+}
 nav a {
   padding: 3% 0 3% 4%;
   text-decoration: none;
   color: black;
+}
+@media (max-width: 500px) {
+  nav a {
+    margin: 2% 0;
+    padding: 2% 3%;
+  }
 }
 nav a:hover {
   color: blueviolet;
@@ -185,6 +197,35 @@ nav a:hover {
   background-color: #edeef0;
   padding: 6% 4% 8%;
   border-radius: 0.5rem;
+}
+@media (max-width: 500px) {
+  .header-hero .headshot {
+    text-align: center;
+    margin-bottom: 4%;
+  }
+}
+@media (max-width: 500px) {
+  .header-hero .hero-content {
+    padding: 3%;
+  }
+}
+.header-hero h1 .br {
+  display: none;
+}
+.header-hero h1 .dash {
+  display: inline;
+}
+@media (max-width: 500px) {
+  .header-hero h1 {
+    text-align: center;
+    padding: 4% 3% 2%;
+  }
+  .header-hero h1 .br {
+    display: inline;
+  }
+  .header-hero h1 .dash {
+    display: none;
+  }
 }
 .header-hero h4 {
   padding: 2% 0;
@@ -200,6 +241,12 @@ nav a:hover {
   background: grey;
   border-radius: 0.5rem;
 }
+@media (max-width: 500px) {
+  .header-hero button {
+    display: block;
+    margin: 5% auto 0 ;
+  }
+}
 .about {
   padding: 3% 0;
   display: flex;
@@ -207,8 +254,19 @@ nav a:hover {
   margin: 0 auto;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .about {
+    flex-direction: column;
+  }
+}
 .about div {
   width: 49%;
+}
+@media (max-width: 500px) {
+  .about div {
+    width: 100%;
+    padding: 4%;
+  }
 }
 .about ul {
   display: flex;
@@ -229,6 +287,11 @@ nav a:hover {
 .work {
   max-width: 90rem;
   margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .work {
+    padding: 4%;
+  }
 }
 .work table {
   width: 100%;
