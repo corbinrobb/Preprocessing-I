@@ -55,41 +55,18 @@ table {
 		// border: 1px solid red !important;
 }
 
-
 html, body {
     height: 100%;
 }
 
-// GENERAL STYLES
-html {
-	font-size: 62.5%;
-}
 
-body {
-font-size: 1.6rem;
-max-width: 92rem;
-margin: 0 auto;
-}
 
-h1 {
-	font-size: 4.5rem;
-}
 
-h2 {
-	font-size: 3.5rem;
-}
 
-h3 {
-	font-size: 2.5rem;
-}
+// IMPORT GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 
-h4 {
-	font-size: 2rem;
-}
-
-p {
-	line-height: 1.5;
-}
+@import url('https://fonts.googleapis.com/css?family=Arvo|Work+Sans&display=swap');
 
 // MIXINS
 .flex {
@@ -104,7 +81,44 @@ p {
 // VARIABLES 
 
 @light-grey: #edeef0;
+@work-sans: 'Work Sans', sans-serif;
+@arvo: 'Arvo', serif;
 
+// GENERAL STYLES
+html {
+	font-size: 62.5%;
+}
+
+body {
+font-size: 1.6rem;
+max-width: 92rem;
+margin: 0 auto;
+font-family: @work-sans;
+
+	h1, h2, h3, h4 {
+		font-family: @arvo;
+	}
+
+	h1 {
+		font-size: 4.5rem;
+	}
+
+	h2 {
+		font-size: 3.5rem;
+	}
+
+	h3 {
+		font-size: 2.5rem;
+	}
+
+	h4 {
+		font-size: 2rem;
+	}
+
+	p {
+		line-height: 1.5;
+	}
+} // END body
 
 // HEADER STYLES
 
@@ -136,8 +150,8 @@ nav {
 		&:hover {
 			color: blueviolet;
 		}
-	}
-}
+	} // END a
+} // END nav
 
 
 
@@ -149,17 +163,19 @@ nav {
 	border-radius: 0.5rem ;
 
 	.headshot {
+		margin-bottom: 4%;
+
 		@media (max-width: 500px) {
 			text-align: center;
-			margin-bottom: 4%;
+			
 		}
-	}
+	} // END .headshot
 
 	.hero-content {
 		@media (max-width: 500px) {
 			padding: 3%;
 		}
-	}
+	} // END .hero-content
 
 	h1 {
 		.br {
@@ -179,8 +195,8 @@ nav {
 			.dash {
 				display: none;
 			}
-		}
-	}
+		} // END max-width: 500px
+	} // END h1
 
 	h4 {
 		padding: 2% 0;
@@ -202,8 +218,8 @@ nav {
 			display: block;
 			margin: 5% auto 0 ;
 		}
-	}
-}
+	} // END button
+} // END .header-hero
 
 // ABOUT STYLES
 
@@ -224,7 +240,7 @@ nav {
 			width: 100%;
 			padding: 4%;
 		}
-	}
+	} // END div
 
 	ul {
 		.flex();
@@ -239,13 +255,13 @@ nav {
 			&:first-child {
 				border-top: 1px solid lightgray;
 			}
-		}
-	}
+		} // END li
+	} // END ul
 
 	p {
 		padding: 2% 0;
 	}
-}
+} // END .about
 
 // WORK HISTORY
 
@@ -276,8 +292,8 @@ nav {
 		td {
 			padding: 1.8%;
 		}
-	}
-}
+	} // END table
+} // END .work
 
 // FOOTER STYLES 
 
