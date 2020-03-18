@@ -69,8 +69,11 @@ html, body {
 @import url('https://fonts.googleapis.com/css?family=Arvo|Work+Sans&display=swap');
 
 // MIXINS
-.flex {
+.flex(@justify, @align, @direction) {
 	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+	flex-direction: @direction;
 }
 
 .main-width {
@@ -129,8 +132,7 @@ header {
 
 // HEADER NAV STYLES
 nav {
-	.flex();
-	justify-content: flex-end;
+	.flex(flex-end, stretch, row);
 
 	@media (max-width: 500px) {
 		justify-content: space-around;
@@ -235,9 +237,8 @@ nav {
 
 .about {
 	padding: 3% 0;
-	.flex();
+	.flex(space-between, stretch, row);
 	.main-width();
-	justify-content: space-between;
 
 	@media (max-width: 500px) {
 		flex-direction: column;
@@ -253,8 +254,7 @@ nav {
 	} // END div
 
 	ul {
-		.flex();
-		flex-direction: column;
+		.flex(flex-start, stretch, column);
 		padding: 2% 0;
 
 		li {
@@ -310,8 +310,6 @@ nav {
 footer {
 	background: grey;
 	height: 5%;
-	.flex();
-	justify-content: center;
-	align-items: center;
+	.flex(center, center, row);
 	color: white;
 }

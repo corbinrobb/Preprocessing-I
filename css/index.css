@@ -156,9 +156,6 @@ body {
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/worksans/v6/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8Jow.ttf) format('truetype');
 }
-.flex {
-  display: flex;
-}
 .main-width {
   max-width: 90rem;
   margin: 0 auto;
@@ -200,6 +197,8 @@ header {
 nav {
   display: flex;
   justify-content: flex-end;
+  align-items: stretch;
+  flex-direction: row;
 }
 @media (max-width: 500px) {
   nav {
@@ -289,9 +288,11 @@ nav a:hover {
 .about {
   padding: 3% 0;
   display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
   max-width: 90rem;
   margin: 0 auto;
-  justify-content: space-between;
 }
 @media (max-width: 500px) {
   .about {
@@ -309,6 +310,8 @@ nav a:hover {
 }
 .about ul {
   display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-direction: column;
   padding: 2% 0;
 }
@@ -355,5 +358,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   color: white;
 }
