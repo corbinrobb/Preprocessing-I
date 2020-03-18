@@ -90,10 +90,10 @@ html {
 }
 
 body {
-font-size: 1.6rem;
-max-width: 92rem;
-margin: 0 auto;
-font-family: @work-sans;
+	font-size: 1.6rem;
+	max-width: 92rem;
+	margin: 0 auto;
+	font-family: @work-sans;
 
 	h1, h2, h3, h4 {
 		font-family: @arvo;
@@ -187,8 +187,10 @@ nav {
 
 		@media (max-width: 500px) {
 			text-align: center;
+			font-size: 3.8rem;
 			padding: 4% 3% 2%;
-
+			line-height: 1.3;
+			
 			.br {
 				display: inline;
 			}
@@ -207,16 +209,24 @@ nav {
 		padding: 2% 0;
 	}
 
-	button {
+	a {
 		padding: 1% 3%;
 		font-size: 2rem;
 		color: white;
 		background: grey;
 		border-radius: 0.5rem;
+		text-decoration: none;
+
+		&:hover {
+			background: lightblue;
+			color: blueviolet;
+			border: 2px solid white;
+		}
 
 		@media (max-width: 500px) {
 			display: block;
 			margin: 5% auto 0 ;
+			width: 50%;
 		}
 	} // END button
 } // END .header-hero

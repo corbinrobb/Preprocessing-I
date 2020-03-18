@@ -248,7 +248,9 @@ nav a:hover {
 @media (max-width: 500px) {
   .header-hero h1 {
     text-align: center;
+    font-size: 3.8rem;
     padding: 4% 3% 2%;
+    line-height: 1.3;
   }
   .header-hero h1 .br {
     display: inline;
@@ -264,17 +266,24 @@ nav a:hover {
 .header-hero p {
   padding: 2% 0;
 }
-.header-hero button {
+.header-hero a {
   padding: 1% 3%;
   font-size: 2rem;
   color: white;
   background: grey;
   border-radius: 0.5rem;
+  text-decoration: none;
+}
+.header-hero a:hover {
+  background: lightblue;
+  color: blueviolet;
+  border: 2px solid white;
 }
 @media (max-width: 500px) {
-  .header-hero button {
+  .header-hero a {
     display: block;
     margin: 5% auto 0 ;
+    width: 50%;
   }
 }
 .about {
