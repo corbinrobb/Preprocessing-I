@@ -86,6 +86,7 @@ html, body {
 @light-grey: #edeef0;
 @work-sans: 'Work Sans', sans-serif;
 @arvo: 'Arvo', serif;
+@mobile: (max-width: 500px);
 
 // GENERAL STYLES
 html {
@@ -134,7 +135,7 @@ header {
 nav {
 	.flex(flex-end, stretch, row);
 
-	@media (max-width: 500px) {
+	@media @mobile {
 		justify-content: space-around;
 		background-color: @light-grey;
 	}
@@ -144,7 +145,7 @@ nav {
 		text-decoration: none;
 		color: black;
 
-		@media (max-width: 500px) {
+		@media @mobile {
 			margin: 2% 0;
 			padding: 2% 3%;
 		}
@@ -167,14 +168,14 @@ nav {
 	.headshot {
 		margin-bottom: 4%;
 
-		@media (max-width: 500px) {
+		@media @mobile{
 			text-align: center;
 			
 		}
 	} // END .headshot
 
 	.hero-content {
-		@media (max-width: 500px) {
+		@media @mobile {
 			padding: 3%;
 		}
 	} // END .hero-content
@@ -187,7 +188,7 @@ nav {
 			display: inline;
 		}
 
-		@media (max-width: 500px) {
+		@media @mobile {
 			text-align: center;
 			font-size: 3.8rem;
 			padding: 4% 3% 2%;
@@ -225,7 +226,7 @@ nav {
 			border: 2px solid white;
 		}
 
-		@media (max-width: 500px) {
+		@media @mobile {
 			display: block;
 			margin: 5% auto 0 ;
 			width: 50%;
@@ -240,14 +241,14 @@ nav {
 	.flex(space-between, stretch, row);
 	.main-width();
 
-	@media (max-width: 500px) {
+	@media @mobile {
 		flex-direction: column;
 	}
 
 	div {
 		width: 49%;
 
-		@media (max-width: 500px) {
+		@media @mobile {
 			width: 100%;
 			padding: 4%;
 		}
@@ -278,7 +279,7 @@ nav {
 .work {
 	.main-width();
 
-	@media (max-width: 500px) {
+	@media @mobile {
 		padding: 4%;
 	}
 	
